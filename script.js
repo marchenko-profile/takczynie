@@ -1,5 +1,5 @@
 // Пароли
-const firstPassword = "3178323";
+const firstPassword = "Delta12345";
 const secondPassword = "Delta12345";
 
 // Получение элементов
