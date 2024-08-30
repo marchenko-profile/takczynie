@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaproszenie na kawę</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-container" class="container">
+        <form id="login-form" class="form">
+            <h2>Wprowadź hasło</h2>
+            <input type="password" id="password" placeholder="Hasło" required>
+            <button type="submit">Zaloguj się</button>
+            <p id="error-message" class="error-message">Niewłaściwe hasło!</p>
+        </form>
+    </div>
+
+    <div id="timer-container" class="container" style="display:none;">
+        <div class="form">
+            <h2>Proszę czekać...</h2>
+            <p id="timer-message" class="timer-message">Upewnij się, że nikt nie widzi Twojego telefonu. Informacje, które będą dalej, są tylko dla Ciebie.</p>
+            <div id="timer" class="timer">01:00</div>
+        </div>
+    </div>
+
+    <div id="second-password-container" class="container" style="display:none;">
+        <form id="second-password-form" class="form">
+            <h2>Wprowadź hasło (Ten sam hasło, co na recepcji)</h2>
+            <input type="password" id="second-password" placeholder="Hasło" required>
+            <button type="submit">Zaloguj się</button>
+            <p id="second-error-message" class="error-message">Niewłaściwe hasło!</p>
+        </form>
+    </div>
+
+    <div id="form-container" class="container" style="display:none;">
+        <div class="form">
+            <h1>Zapraszam Cię na kawę nocą, kiedy będziesz miała kontrolę na cargo.</h1>
+            <p>Podpisując ten dokument, zgadzasz się na nieujawnianie informacji osobom trzecim.</p>
+            <form id="invite-form">
+                <label>Przyjmujesz zaproszenie? Wybierz jedną z odpowiedzi:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="response" value="Tak, idę" required>
+                        Tak, idę 
+                    </label>
+                    <label>
+                        <input type="radio" name="response" value="Tak, idę 😊">
+                        Tak, idę 😊
+                    </label>
+                </div>
+                <button type="submit">Wyślij</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
